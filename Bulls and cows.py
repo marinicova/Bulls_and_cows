@@ -69,15 +69,13 @@ def tip_correct(tip):
         b = tip.count(tip[1])
         c = tip.count(tip[2])
     except IndexError:
-        print("It's not number!!!")
-        return tip_player()
-
+        return False
     if len(tip) != 4 or a != 1 or b != 1 or c != 1:
-        result = False
+        return False
+    elif tip.isdigit() is False:
+        return False
     else:
-        result = True
-
-    return result
+        return True
 
 
 def game_assess(tip, guess_num):
@@ -88,6 +86,7 @@ def game_assess(tip, guess_num):
             bulls += 1
         elif int(num) in guess_num:
             cows += 1
+
     return bulls, cows
 
 
