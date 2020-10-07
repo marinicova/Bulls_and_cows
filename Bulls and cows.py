@@ -4,10 +4,9 @@ import time
 
 def main():
 
-    print(
-        "Hi there!\n"
-        "I've generated a random 4 digit number for you.\n"
-        "Let's play a bulls and cows game.")
+    print(f"Hi there!\n"
+          f"I've generated a random 4 digit number for you.\n"
+          f"Let's play a bulls and cows game")
 
     play = 'g'
     while play == 'g':
@@ -101,4 +100,3 @@ def result_r(bulls, cows, guess, tip):
 
 
 main()
-
